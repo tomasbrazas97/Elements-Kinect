@@ -28,7 +28,7 @@ public class BodySourceView : MonoBehaviour
         }
         
         List<ulong> trackedIds = new List<ulong>();
-        foreach(var body in data)
+        foreach (var body in data)
         {
             if (body == null)
             {
@@ -76,7 +76,7 @@ public class BodySourceView : MonoBehaviour
                 }
                 
                 // Update positions
-                RefreshBodyObject(body, mBodies[body.TrackingId]);
+                UpdateBodyObject(body, mBodies[body.TrackingId]);
             }
         }
 
