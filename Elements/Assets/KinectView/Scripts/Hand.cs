@@ -19,6 +19,7 @@ public class Hand : MonoBehaviour
             return;
         }
 
-        collision.gameObject.SetActive(false);
+        Orb orb = collision.gameObject.GetComponent<Orb>();
+        StartCoroutine(orb.Pop());
     }
 }
