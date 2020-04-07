@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c54c5280bbb654787cd065eb9bf4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mOrbSprite: {fileID: 21300006, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
-  mPopSprite: {fileID: 21300004, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
+  mOrbSprite: {fileID: 21300000, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
+  mPopSprite: {fileID: 21300002, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
   mOrbManager: {fileID: 0}
 --- !u!212 &1998834649759344843
 SpriteRenderer:
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
