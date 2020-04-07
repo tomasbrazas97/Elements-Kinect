@@ -10,6 +10,10 @@ public class OrbManager : MonoBehaviour
     private Vector2 mBottomLeft = Vector2.zero;
     private Vector2 mTopRight = Vector2.zero;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] spriteArray;
+    public int currentSprite;
+
     private void Awake()
     {
         //Bounding values
@@ -21,6 +25,19 @@ public class OrbManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CreateOrbs());
+        
+
+    }
+
+    void ChangeSprite()
+    {
+        spriteRenderer.sprite = spriteArray[currentSprite];
+        currentSprite++;
+
+        if (currentSprite >= spriteArray.Length)
+        {
+            currentSprite = 0;
+        }
     }
 
     public Vector3 GetPlanePosition()
@@ -35,10 +52,10 @@ public class OrbManager : MonoBehaviour
 
     private IEnumerator CreateOrbs()
     {
-        while (mAllOrbs.Count < 10)
+        while (mAllOrbs.Count < 15)
         {
             // Create and add
-
+            ChangeSprite();
             GameObject newOrbObject = Instantiate(mOrbPrefab, GetPlanePosition(), Quaternion.identity, transform);
             Orb newOrb = newOrbObject.GetComponent<Orb>();
 
