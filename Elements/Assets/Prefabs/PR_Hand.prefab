@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1221780992093973509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1342837981279876228}
   m_Father: {fileID: 0}
@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81f58acbad51c2c46b11cbaa27e679f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  spriteArray: []
 --- !u!50 &5198870740487281086
 Rigidbody2D:
   serializedVersion: 4

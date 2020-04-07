@@ -34,8 +34,8 @@ public class VoiceHand : MonoBehaviour
 
     private void Fire()
     {
-        spriteRenderer.sprite = spriteArray[0];
-        Debug.Log("fire");
+        spriteRenderer.sprite = spriteArray[0]; 
+        
     }
 
     private void Earth()

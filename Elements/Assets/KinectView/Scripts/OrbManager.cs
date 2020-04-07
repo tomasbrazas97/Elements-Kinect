@@ -35,7 +35,7 @@ public class OrbManager : MonoBehaviour
 
     private IEnumerator CreateOrbs()
     {
-        while (mAllOrbs.Count < 20)
+        while (mAllOrbs.Count < 10)
         {
             // Create and add
 
