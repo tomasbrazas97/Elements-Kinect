@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OrbManager : MonoBehaviour
 {
-    public GameObject mOrbPrefab;
+    public GameObject[] orbs;
+
 
     private List<Orb> mAllOrbs = new List<Orb>();
     private Vector2 mBottomLeft = Vector2.zero;
     private Vector2 mTopRight = Vector2.zero;
 
-    public SpriteRenderer spriteRenderer;
-    public Sprite[] spriteArray;
-    public int currentSprite;
+    //public SpriteRenderer spriteRenderer;
+   // public Sprite[] spriteArray;
+  //  public int currentSprite;
 
     private void Awake()
     {
@@ -24,12 +26,11 @@ public class OrbManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        StartCoroutine(CreateOrbs());
-        
 
+        StartCoroutine(CreateOrbs());
     }
 
-    void ChangeSprite()
+   /* void ChangeSprite()
     {
         spriteRenderer.sprite = spriteArray[currentSprite];
         currentSprite++;
@@ -38,7 +39,7 @@ public class OrbManager : MonoBehaviour
         {
             currentSprite = 0;
         }
-    }
+    }*/
 
     public Vector3 GetPlanePosition()
     {
@@ -55,8 +56,8 @@ public class OrbManager : MonoBehaviour
         while (mAllOrbs.Count < 15)
         {
             // Create and add
-            ChangeSprite();
-            GameObject newOrbObject = Instantiate(mOrbPrefab, GetPlanePosition(), Quaternion.identity, transform);
+            // ChangeSprite();
+            GameObject newOrbObject = Instantiate(orbs[UnityEngine.Random.Range(0, 3)], GetPlanePosition(), Quaternion.identity, transform);
             Orb newOrb = newOrbObject.GetComponent<Orb>();
 
             // Setup orb

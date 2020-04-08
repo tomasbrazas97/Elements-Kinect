@@ -7,6 +7,10 @@ TagManager:
   - Bubble
   - Hand
   - Orb
+  - Fire
+  - Water
+  - Air
+  - Earth
   layers:
   - Default
   - TransparentFX

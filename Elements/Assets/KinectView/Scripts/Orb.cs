@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Orb : MonoBehaviour
 {
@@ -44,6 +45,7 @@ public class Orb : MonoBehaviour
         mSpriteRenderer.sprite = mPopSprite;
         StopCoroutine(mCurrentChanger);
         mMovementDirection = Vector3.zero;
+        ScoreScript.scoreValue += 1;
 
         yield return new WaitForSeconds(0.5f);
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6997222941220152046}
   m_Layer: 0
   m_Name: PR_Orb
-  m_TagString: Orb
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
