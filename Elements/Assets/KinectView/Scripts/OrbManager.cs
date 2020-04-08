@@ -57,7 +57,7 @@ public class OrbManager : MonoBehaviour
         {
             // Create and add
             // ChangeSprite();
-            GameObject newOrbObject = Instantiate(orbs[UnityEngine.Random.Range(0, 3)], GetPlanePosition(), Quaternion.identity, transform);
+            GameObject newOrbObject = Instantiate(orbs[UnityEngine.Random.Range(0, 4)], GetPlanePosition(), Quaternion.identity, transform);
             Orb newOrb = newOrbObject.GetComponent<Orb>();
 
             // Setup orb
