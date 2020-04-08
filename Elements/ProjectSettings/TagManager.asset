@@ -11,6 +11,10 @@ TagManager:
   - Water
   - Air
   - Earth
+  - FireHand
+  - EarthHand
+  - WaterHand
+  - AirHand
   layers:
   - Default
   - TransparentFX
