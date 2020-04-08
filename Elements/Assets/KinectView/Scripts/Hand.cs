@@ -25,15 +25,22 @@ public class Hand : MonoBehaviour
             StartCoroutine(orb.Pop());
             return;
         }
-        else
+        else if (collision.gameObject.tag == "Water" && gameObject.tag != "Air"
+              && gameObject.tag != "Fire" && gameObject.tag != "Earth")
         {
-            Destroy(gameObject);
-            menuContainer.SetActive(true);
-            Debug.Log("Health Lost");
+            Orb orb = collision.gameObject.GetComponent<Orb>();
+            StartCoroutine(orb.Pop());
+            return;
         }
-
-        if (collision.gameObject.tag == "Water" && gameObject.tag != "Air"
-                && gameObject.tag != "Fire" && gameObject.tag != "Earth")
+        else if (collision.gameObject.tag == "Earth" && gameObject.tag != "Air"
+              && gameObject.tag != "Fire" && gameObject.tag != "Water")
+        {
+            Orb orb = collision.gameObject.GetComponent<Orb>();
+            StartCoroutine(orb.Pop());
+            return;
+        }
+        else if (collision.gameObject.tag == "Air" && gameObject.tag != "Water"
+              && gameObject.tag != "Fire" && gameObject.tag != "Earth")
         {
             Orb orb = collision.gameObject.GetComponent<Orb>();
             StartCoroutine(orb.Pop());
@@ -42,35 +49,7 @@ public class Hand : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            menuContainer.SetActive(true);
-            Debug.Log("Health Lost");
-        }
-
-        if (collision.gameObject.tag == "Earth" && gameObject.tag != "Air"
-                && gameObject.tag != "Fire" && gameObject.tag != "Water")
-        {
-            Orb orb = collision.gameObject.GetComponent<Orb>();
-            StartCoroutine(orb.Pop());
-            return;
-        }
-        else
-        {
-            Destroy(gameObject);
-            menuContainer.SetActive(true);
-            Debug.Log("Health Lost");
-        }
-
-        if (collision.gameObject.tag == "Air" && gameObject.tag != "Water"
-                && gameObject.tag != "Fire" && gameObject.tag != "Earth")
-        {
-            Orb orb = collision.gameObject.GetComponent<Orb>();
-            StartCoroutine(orb.Pop());
-            return;
-        }
-        else
-        {
-            Destroy(gameObject);
-            menuContainer.SetActive(true);
+        menuContainer.SetActive(true);
             Debug.Log("Health Lost");
         }
     }
