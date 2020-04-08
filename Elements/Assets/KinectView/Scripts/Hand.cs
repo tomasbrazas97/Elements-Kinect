@@ -14,12 +14,53 @@ public class Hand : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.gameObject.CompareTag("Fire"))
+        
+        if (collision.gameObject.tag == "Fire" && gameObject.tag != "Air"
+             && gameObject.tag != "Water" && gameObject.tag != "Earth")
         {
+            Orb orb = collision.gameObject.GetComponent<Orb>();
+            StartCoroutine(orb.Pop());
             return;
         }
+        else
+        {
+            Debug.Log("Health Lost");
+        }
 
-        Orb orb = collision.gameObject.GetComponent<Orb>();
-        StartCoroutine(orb.Pop());
+        if (collision.gameObject.tag == "Water" && gameObject.tag != "Air"
+             && gameObject.tag != "Fire" && gameObject.tag != "Earth")
+        {
+            Orb orb = collision.gameObject.GetComponent<Orb>();
+            StartCoroutine(orb.Pop());
+            return;
+        }
+        else
+        {
+            Debug.Log("Health Lost");
+        }
+
+        if (collision.gameObject.tag == "Earth" && gameObject.tag != "Air"
+             && gameObject.tag != "Fire" && gameObject.tag != "Water")
+        {
+            Orb orb = collision.gameObject.GetComponent<Orb>();
+            StartCoroutine(orb.Pop());
+            return;
+        }
+        else
+        {
+            Debug.Log("Health Lost");
+        }
+
+        if (collision.gameObject.tag == "Air" && gameObject.tag != "Water"
+             && gameObject.tag != "Fire" && gameObject.tag != "Earth")
+        {
+            Orb orb = collision.gameObject.GetComponent<Orb>();
+            StartCoroutine(orb.Pop());
+            return;
+        }
+        else
+        {
+            Debug.Log("Health Lost");
+        }
     }
 }

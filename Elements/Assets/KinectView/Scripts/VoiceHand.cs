@@ -35,25 +35,25 @@ public class VoiceHand : MonoBehaviour
     private void Fire()
     {
         spriteRenderer.sprite = spriteArray[0];
-        transform.gameObject.tag = "FireHand";
+        transform.gameObject.tag = "Fire";
 
     }
 
     private void Earth()
     {
         spriteRenderer.sprite = spriteArray[3];
-        transform.gameObject.tag = "EarthHand";
+        transform.gameObject.tag = "Earth";
     }
 
     private void Water()
     {
         spriteRenderer.sprite = spriteArray[1];
-        transform.gameObject.tag = "WaterHand";
+        transform.gameObject.tag = "Water";
     }
 
     private void Air()
     {
         spriteRenderer.sprite = spriteArray[2];
-        transform.gameObject.tag = "AirHand";
+        transform.gameObject.tag = "Air";
     }
 }
