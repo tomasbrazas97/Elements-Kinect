@@ -48,6 +48,8 @@ public class Hand : MonoBehaviour
         }
         else
         {
+            ScoreScript.scoreValue = 0;
+            SoundManagerScript.PlaySound("DeathSound");
             Destroy(gameObject);
         menuContainer.SetActive(true);
             Debug.Log("Health Lost");

@@ -7,6 +7,7 @@ public class Restart : MonoBehaviour
 {
     public void click()
     {
+        SoundManagerScript.PlaySound("ClickSound");
         SceneManager.LoadScene("MainScene");
     }
 }

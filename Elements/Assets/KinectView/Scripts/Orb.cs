@@ -42,6 +42,7 @@ public class Orb : MonoBehaviour
 
     public IEnumerator Pop()
     {
+        SoundManagerScript.PlaySound("Explosion");
         mSpriteRenderer.sprite = mPopSprite;
         StopCoroutine(mCurrentChanger);
         mMovementDirection = Vector3.zero;
