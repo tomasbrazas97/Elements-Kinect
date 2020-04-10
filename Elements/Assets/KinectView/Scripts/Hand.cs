@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Hand : MonoBehaviour
 {
     public Transform mHandMesh;
+    Rigidbody2D m_Rigidbody;
 
     public GameObject menuContainer;
 
@@ -14,6 +15,11 @@ public class Hand : MonoBehaviour
     {
         mHandMesh.position = Vector3.Lerp(mHandMesh.position, transform.position, Time.deltaTime * 15.0f);
 
+    }
+
+    private void Start()
+    {
+        m_Rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,8 +56,8 @@ public class Hand : MonoBehaviour
         {
             ScoreScript.scoreValue = 0;
             SoundManagerScript.PlaySound("DeathSound");
-            Destroy(gameObject);
-        menuContainer.SetActive(true);
+            m_Rigidbody.constraints = RigidbodyConstraints2D.FreezePosition;
+            menuContainer.SetActive(true);
             Debug.Log("Health Lost");
         }
     }
