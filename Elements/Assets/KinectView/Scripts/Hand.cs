@@ -15,6 +15,7 @@ public class Hand : MonoBehaviour
     {
         mHandMesh.position = Vector3.Lerp(mHandMesh.position, transform.position, Time.deltaTime * 15.0f);
 
+
     }
 
     private void Start()

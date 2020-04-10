@@ -26,6 +26,10 @@ public class VoiceHand : MonoBehaviour
         actions.Add("pause", Pause);
         actions.Add("continue", Continue);
         actions.Add("restart", Restart);
+        actions.Add("up", Up);
+        actions.Add("down", Down);
+        actions.Add("Left", Left);
+        actions.Add("Right", Right);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -80,6 +84,26 @@ public class VoiceHand : MonoBehaviour
     {
         ScoreScript.scoreValue = 0;
         SceneManager.LoadScene("MainScene");
+    }
+
+    private void Up()
+    {
+        transform.Translate(0, 5, 0);
+    }
+
+    private void Down()
+    {
+        transform.Translate(0, -5, 0);
+    }
+
+    private void Left()
+    {
+        transform.Translate(-5, 0, 0);
+    }
+
+    private void Right()
+    {
+        transform.Translate(5, 0, 0);
     }
 
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6978510614656987867}
   - component: {fileID: 6978510614656987866}
   - component: {fileID: 6978510614656987861}
+  - component: {fileID: 8354351294772770730}
   - component: {fileID: 6978510614656987860}
   - component: {fileID: 6978510614656987863}
   - component: {fileID: 6978510614656987862}
@@ -60,7 +61,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6978510614656987857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d90534f91c7bb244788de6b164f04649, type: 3}
   m_Name: 
@@ -78,6 +79,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mHandMesh: {fileID: 6978510616016511445}
+  menuContainer: {fileID: 0}
+--- !u!114 &8354351294772770730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978510614656987857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3b7000869cd0a478e5f7548d0ee732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6978510614656987860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +110,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
   - {fileID: 21300004, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
   - {fileID: 21300006, guid: be43950f6828b66479a7cc1b5c37abdc, type: 3}
+  menuContainer: {fileID: 0}
 --- !u!50 &6978510614656987863
 Rigidbody2D:
   serializedVersion: 4
@@ -131,6 +146,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -142,6 +158,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -219,6 +236,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -230,6 +248,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
