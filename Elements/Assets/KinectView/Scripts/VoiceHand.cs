@@ -26,10 +26,15 @@ public class VoiceHand : MonoBehaviour
         actions.Add("pause", Pause);
         actions.Add("continue", Continue);
         actions.Add("restart", Restart);
+        actions.Add("go up", Up);
+        actions.Add("go down", Down);
+        actions.Add("go Left", Left);
+        actions.Add("go Right", Right);
         actions.Add("up", Up);
         actions.Add("down", Down);
         actions.Add("Left", Left);
         actions.Add("Right", Right);
+        actions.Add("Quit", Quit);
 
         keywordRecognizer = new KeywordRecognizer(actions.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += RecognizedSpeech;
@@ -106,4 +111,8 @@ public class VoiceHand : MonoBehaviour
         transform.Translate(5, 0, 0);
     }
 
+    private void Quit()
+    {
+        Application.Quit();
+    }
 }

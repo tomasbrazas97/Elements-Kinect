@@ -1,2 +1,0 @@
-C:\Users\zyrxe\Documents\GitHub\Elements-Kinect\Elements\Temp\UnityVS_obj\Debug\UnityEngine.TestRunner.csprojResolveAssemblyReference.cache
-C:\Users\zyrxe\Documents\GitHub\Elements-Kinect\Elements\Temp\UnityVS_obj\Debug\UnityEngine.TestRunner.csproj.CoreCompileInputs.cache
